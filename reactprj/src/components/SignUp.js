@@ -42,6 +42,31 @@ function SignUp(){
                     />
                 </div>
 
+                <div>
+                    <input 
+                        type="email" 
+                        value={email} 
+                        onChange={emailChange} 
+                        placeholder="Enter Email" 
+                        className={styles.inputField} 
+                        required
+                    />
+                </div>
+                <div>
+                    <input 
+                        type="password" 
+                        value={password} 
+                        onChange={passwordChange} 
+                        placeholder="Enter a password" 
+                        className={styles.inputField} 
+                        required
+                    />
+                </div>
+
+                <div>
+                    <button type="submit" className={styles.submitButton}>Sign Up</button>
+                </div>
+
             </form>
 
         </div>
