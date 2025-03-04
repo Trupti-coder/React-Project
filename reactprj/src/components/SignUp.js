@@ -12,6 +12,12 @@ function SignUp(){
 
     return(
         <>
+        <div className={styles.signupContainer}>
+            <form onSubmit={funSubmit} className={styles.signupForm}>
+
+            </form>
+
+        </div>
         </>
     );
 }
