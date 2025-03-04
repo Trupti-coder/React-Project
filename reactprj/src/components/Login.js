@@ -6,6 +6,19 @@ function Login(){
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+
+    function emailChange(event) {
+        setEmail(event.target.value);
+    }
+
+    function passwordChange(event) {
+        setPassword(event.target.value);
+    }
+
+    async function funSubmit(event) {
+        event.preventDefault();
+        setError("");
+    
     return(
         <>
         <div className={styles.signinForm}>
