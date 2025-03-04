@@ -39,6 +39,31 @@ function SignUp(){
             password,
         };
 
+        try {
+            const response = await fetch("http://localhost:5000/books/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newUser),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSuccess(`User created successfully! Your ID: ${data.userID}`);
+                setName("");
+                setNumber("");
+                setEmail("");
+                setPassword("");
+            } else {
+                setError(data.msg || "Error signing up. Please try again.");
+            }
+        } catch (err) {
+            setError("Failed to connect to the server.");
+        }
+    }
+
     return(
         <>
         <div className={styles.signupContainer}>
