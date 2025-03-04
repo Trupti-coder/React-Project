@@ -9,6 +9,17 @@ function Login(){
                 
                 {error && <p className={styles.errorMessage}>{error}</p>}
 
+                <div>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={emailChange}
+                        placeholder="Enter your email"
+                        required
+                        className={styles.inputField}
+                    />
+                </div>
+
             </form>
 
         </div>
