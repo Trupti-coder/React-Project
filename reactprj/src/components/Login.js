@@ -18,6 +18,28 @@ function Login(){
     async function funSubmit(event) {
         event.preventDefault();
         setError("");
+
+        try {
+            const response = await fetch("http://localhost:5000/books/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Login successful");
+                navigate("/"); // Redirect to home page
+            } else {
+                setError(data.msg || "Invalid credentials! Please try again.");
+            }
+        } catch (err) {
+            setError("Failed to connect to the server.");
+        }
+    }
     
     return(
         <>
