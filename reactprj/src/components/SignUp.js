@@ -27,6 +27,18 @@ function SignUp(){
         setPassword(event.target.value);
     }
 
+    async function funSubmit(event) {
+        event.preventDefault();
+        setError("");
+        setSuccess("");
+
+        const newUser = {
+            username: name,
+            mobileNumber: number,
+            email,
+            password,
+        };
+
     return(
         <>
         <div className={styles.signupContainer}>
