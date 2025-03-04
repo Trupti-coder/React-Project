@@ -33,3 +33,27 @@
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.inputField::placeholder {
+    color: #666;
+}
+
+.inputField:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #81d4fa; /* Light blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+}
