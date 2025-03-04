@@ -10,6 +10,23 @@ function SignUp(){
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
+
+    function nameChange(event) {
+        setName(event.target.value);
+    }
+
+    function numberChange(event) {
+        setNumber(event.target.value);
+    }
+
+    function emailChange(event) {
+        setEmail(event.target.value);
+    }
+
+    function passwordChange(event) {
+        setPassword(event.target.value);
+    }
+
     return(
         <>
         <div className={styles.signupContainer}>
