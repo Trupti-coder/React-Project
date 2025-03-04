@@ -57,3 +57,8 @@
     font-family: 'Arial', sans-serif;
     font-size: 1em;
 }
+
+.submitButton:hover {
+    background-color: #4fc3f7; /* Darker shade of light blue */
+    transform: translateY(-3px);
+}
